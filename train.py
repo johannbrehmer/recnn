@@ -68,7 +68,7 @@ def train(filename_train,
     logging.info("Loading data...")
 
     fd = open(filename_train, "rb")
-    X, y = pickle.load(fd)
+    X, y = pickle.load(fd, encoding='latin1')
     fd.close()
     y = np.array(y)
 
